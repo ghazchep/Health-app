@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #d3d3d3, #f5f5f5);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.weather-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 360px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 0.75rem 0;
+}
+
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.location-input {
+  padding: 0.5rem;
+  width: 65%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem 0 0 0.25rem;
+  font-size: 0.85rem;
+  color: #374151;
+  background: #f0f0f0;
+}
+
+.location-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.weather-button {
+  padding: 0.5rem 0.75rem;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 0 0.25rem 0.25rem 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.weather-button:hover {
+  background: #1d4ed8;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.location {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #374151;
+  margin: 0;
+}
+
+.temperature,
+.condition {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.error {
+  font-size: 0.9rem;
+  color: #dc2626;
+  font-weight: 500;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .weather-card {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .location-input,
+  .weather-button {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+
+  .location {
+    font-size: 1rem;
+  }
+
+  .temperature,
+  .condition,
+  .error {
+    font-size: 0.8rem;
+  }
+}
